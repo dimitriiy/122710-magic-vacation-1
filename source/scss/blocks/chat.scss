@@ -186,3 +186,45 @@
 .chat__footer {
   margin-top: auto;
 }
+
+.chat__footer {
+}
+
+.chat__footer input {
+  // width: 0;
+  animation: extending 0.4s ease-in-out forwards;
+}
+
+.form__button {
+  animation: text 1s 0.07s ease-in-out forwards;
+}
+
+@keyframes text {
+  from {
+    color: #fff;
+  }
+
+  to {
+    color: #5f458c;
+  }
+}
+
+@keyframes extending {
+  from {
+    flex: 0;
+  }
+
+  to {
+    flex: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

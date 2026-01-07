@@ -277,13 +277,50 @@
       outline: none;
 
       &::after {
+        content: "";
+        height: 2px;
         opacity: 1;
         background-color: $c-purple;
+        width: 100%;
       }
     }
   }
 }
+.page-header__menu a {
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    opacity: 1;
 
+    width: 0;
+    right: -100%;
+    transition: all 1s linear;
+  }
+}
+
+.page-header__menu a {
+  &::after {
+    left: 100%;
+  }
+}
+
+.page-header__menu a:hover {
+  &::after {
+    width: 100%;
+    left: 0;
+    transition: width 0.4s ease, background-color 0.4s ease;
+    background-color: $c-purple;
+  }
+}
+.page-header__menu a.active {
+  &::after {
+    width: 100%;
+    left: 0;
+    transition: none;
+    background-color: #fff;
+  }
+}
 .page-header__social {
   margin-left: 4.8rem;
 

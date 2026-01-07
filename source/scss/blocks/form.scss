@@ -77,9 +77,11 @@
     font-size: 1.6rem;
   }
 }
-
+.form {
+  justify-content: flex-end;
+}
 .form__button {
-  flex-grow: 1;
+  // flex-grow: 1;
 
   @media (orientation: portrait) {
     position: relative;

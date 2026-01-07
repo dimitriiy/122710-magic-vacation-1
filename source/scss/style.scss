@@ -20,3 +20,46 @@
 @import "blocks/screen.scss";
 @import "blocks/slider.scss";
 @import "blocks/social-block.scss";
+
+.page-header__nav {
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.75, 1);
+}
+.page-header__logo {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.75, 1);
+}
+.screen__footer {
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.75, 1);
+}
+
+.loaded .screen__footer {
+  transform: translateY(0);
+}
+
+.loaded .page-header__logo {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.loaded .page-header__nav {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  background: #5f458c;
+  transition: all 0.5s linear;
+}
+
+.overlay.active {
+  transform: translateY(0);
+  z-index: 5;
+}
